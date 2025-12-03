@@ -1,0 +1,227 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ASSOGNING LEFT AND RIGHT*/
+.left, .right{
+    position: fixed;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+div.left {
+    left: 0;
+    background-color: rgb(70, 70, 197);
+}
+
+div.right {
+    left: 50vw;
+    background-color: rgb(225, 90, 90);
+}
+
+@media (orientation: portrait) {
+    .left, .right{
+        position: fixed;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    div.left {
+        top: 0;
+        left: 0;
+        background-color: rgb(89, 89, 213);
+    }
+
+    div.right {
+        top: 50vh;
+        left: 0;
+        background-color: rgb(233, 107, 107);
+    }
+
+    
+}
+
+/*bottom and top*/
+.bottom{
+    position: fixed;
+    background-color: gray;
+    margin: 15px
+}
+
+.bottom{
+    width: 60vh;
+    height: 60vh;
+    bottom: 0;
+}
+
+.left .bottom{
+    left : 0;
+}
+
+.right .bottom{
+    right: 0;
+}
+
+.top{
+    position: fixed;
+    background-color: greenyellow;
+    width: 60vh;
+    height: 60vh;
+}
+
+
+@media (orientation: portrait) {
+    .bottom{
+        width: 40vh;
+        height: 40vh;
+        left: 0;
+    }
+
+    .left .bottom{
+        top: 0;
+    }
+
+    .right .bottom{
+        bottom: 0;
+    }
+
+    .top{
+        width: calc(90vw - 40vh);
+        height: 40vh;
+    }
+
+    .left .top{
+        left: 100%;
+    }
+}
+
+
+/* Joystick and pad*/
+.joystick , .D-pad , .N-pad{
+    width: inherit;
+    height: inherit;
+}
+
+.joy{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: gray;
+}
+
+.joy{
+    top: calc(50% - 50px/2);
+    left: calc(50% - 50px/2);
+}
+
+.joystick{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.joystick .touch{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.joystick .bg{
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    border-radius: 100%;
+}
+
+.joystick .bg:hover{
+    background-color: rgba(220, 220, 220, 0.629);
+}
+
+/*PADS*/
+.Button_P * {
+    width: max(20vh ,50px);
+    height: max(20vh ,50px);
+    position: absolute;
+}
+
+@media (orientation: portrait){
+.Button_P * {
+    width: max(20vw ,50px);
+    height: max(20vw ,50px);
+}   
+}
+
+/*D-pad*/
+.M{
+    top: 50%;
+    left: 50%
+}
+
+.U{
+    left: calc(100% - 50px);
+}
+
+.D{
+    left: calc(0% + 50px);
+}
+
+.R{
+    top: calc(100% - 50px);
+}
+
+.L{
+    top: calc(0% + 50px);
+}
+
+.Button_P *{
+    transform: translate(-50% , -50%);
+}
+/*logic*/
+.hidden {
+    visibility: hidden;
+    position: fixed;
+
+}
+
+.visible {
+    visibility: visible;
+    position: relative;
+}
+
+
+/*Dev stuff and Quality of Life*/
+.dev *{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.fullscreen{
+    top: -50px;
+    left: calc(50vw - 50px);
+}
+
+.reload{
+    bottom: -50px;
+    right: calc(50vw - 50px);
+}
+
+
+@media (orientation: portrait) {
+    .fullscreen{
+        top: calc(50vh - 50px);
+        left: calc(100vw - 50px);        
+    }
+
+    .reload{
+        bottom: calc(50vh - 50px);
+        right: calc(100vw - 50px);        
+    }
+}

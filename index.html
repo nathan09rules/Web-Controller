@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body id="controller">
+    <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="manifest.json">
+    <button onclick="goFullscreen()">Go Fullscreen</button>
+    <div class="left">
+        <div class="bottom">
+            <div class="joystick hidden">
+                <div class="bg"></div>
+                <button class="touch"></button>
+                <div class="joy"></div>
+            </div>
+            <div class="D-pad Button_P visible">
+                <button class="U M">UP</button>
+                <button class="L M">LE</button>
+                <button class="D M">DO</button>
+                <button class="R M">RI</button>
+
+                <button class="U L">UL</button>
+                <button class="L D">LD</button>
+                <button class="D R">DR</button>
+                <button class="R U">RU</button>
+            </div>
+        </div>
+        <div class="top Button_P">
+            <button id="L1">L1</button>
+            <button id="L2">L2</button>
+        </div>
+    </div>
+    <div class="right">
+        <div class="bottom">
+            <div class="joystick hidden">
+                <div class="bg"></div>
+                <button class="touch"></button>
+                <div class="joy"></div>
+            </div>
+            <div class="N-pad Button_P visible">
+                <button id="X" class="U M">X</button>
+                <button id="Y" class="L M">Y</button>
+                <button id="O" class="D M">O</button>
+                <button id="Z" class="R M">Z</button>
+            </div>
+        </div>
+        <div class="top Button_P">
+            <button id="R1">R1</button>
+            <button id="R2">R2</button>
+        </div>
+    </div>
+    <div class="top">
+
+    </div>
+    </div>
+    </div>
+
+    <div class="dev">
+        <button class="fullscreen" onclick="goFullscreen()"></button>
+        <button class="reload" onclick="goReload()"></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
